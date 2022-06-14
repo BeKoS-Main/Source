@@ -13788,7 +13788,7 @@ local bank_users = Redis:smembers(black.."booob")
 if #bank_users == 0 then
 return send(msg.chat_id,msg.id,"•  لا يوجد حسابات في البنك","md",true)
 end
-top_mony = "توب اغنى 10 شخص في البوت :\n\n"
+top_mony = "توب اغنى 25 شخص في البوت :\n\n"
 mony_list = {}
 for k,v in pairs(bank_users) do
 local mony = Redis:get(black.."boob"..v)
@@ -13797,19 +13797,34 @@ end
 table.sort(mony_list, function(a, b) return a[1] > b[1] end)
 num = 1
 emoji ={ 
-"🥇" ,
-"🥈",
-"🥉",
-"4",
-"5",
-"6",
-"7",
-"8",
-"9",
-"10"
+"🥇 )" ,
+"🥈 )",
+"🥉 )",
+"4 )",
+"5 )",
+"6 )",
+"7 )",
+"8 )",
+"9 )",
+"10 )",
+"11 )",
+"12 )",
+"13 )",
+"14 )",
+"15 )",
+"16 )",
+"17 )",
+"18 )",
+"19 )",
+"20 )",
+"21 )",
+"22 )",
+"23 )",
+"24 )",
+"25 )"
 }
 for k,v in pairs(mony_list) do
-if num <= 10 then
+if num <= 25 then
 local user_name = LuaTele.getUser(v[2]).first_name
 if user_name then
 nname = user_name
@@ -13820,10 +13835,11 @@ local user_tag = '['..nname..'](tg://user?id='..v[2]..')'
 local mony = v[1]
 local emo = emoji[k]
 num = num + 1
-top_mony = top_mony.."*"..emo.."*) *"..mony.."* 💰 l ["..nname.."] \n"
+top_mony = top_mony.."*"..emo.."*) *"..mony.."* 💸 l ["..nname.."] \n"
+gg = " ━━━━━━━━━\n*# You)*  *"..ballancee.." 💸* l "..news.." \n\n\n*- القائمة تتحدث كل 10 دقائق"
+end 
 end
-end
-return send(msg.chat_id,msg.id,top_mony,"md")
+return send(msg.chat_id,msg.id,top_mony..gg,"md")
 end
 
 if text == "توب الحراميه" or text == "توب الحرامية" or text == "توب حراميه" or text == "توب الزرف" or text == "توب زرف" then
@@ -13831,7 +13847,7 @@ local ty_users = Redis:smembers(black.."zrfffid")
 if #ty_users == 0 then
 return send(msg.chat_id,msg.id,"•  لا يوجد احد","md",true)
 end
-ty_anubis = "توب 10 اشخاص زرفوا فلوس :\n\n"
+ty_anubis = "توب 25 اشخاص زرفوا فلوس :\n\n"
 ty_list = {}
 for k,v in pairs(ty_users) do
 local mony = Redis:get(black.."zrfff"..v)
@@ -13840,19 +13856,34 @@ end
 table.sort(ty_list, function(a, b) return a[1] > b[1] end)
 num_ty = 1
 emojii ={ 
-"🥇" ,
-"🥈",
-"🥉",
-"4",
-"5",
-"6",
-"7",
-"8",
-"9",
-"10"
+"🥇 )" ,
+"🥈 )",
+"🥉 )",
+"4 )",
+"5 )",
+"6 )",
+"7 )",
+"8 )",
+"9 )",
+"10 )",
+"11 )",
+"12 )",
+"13 )",
+"14 )",
+"15 )",
+"16 )",
+"17 )",
+"18 )",
+"19 )",
+"20 )",
+"21 )",
+"22 )",
+"23 )",
+"24 )",
+"25 )"
 }
 for k,v in pairs(ty_list) do
-if num_ty <= 10 then
+if num_ty <= 25 then
 local user_name = LuaTele.getUser(v[2]).first_name
 if user_name then
 nname = user_name
@@ -16331,7 +16362,7 @@ name = string.gsub(name,"🧝‍♂","🧝‍♀🧝‍♀🧝‍♀🧝‍♀�
 name = string.gsub(name,"🙍‍♂️","🙎‍♂️🙎‍♂️🙎‍♂️🙎‍♂️🙎‍♂️🙍‍♂️🙎‍♂️🙎‍♂️🙎‍♂️")
 name = string.gsub(name,"🧖‍♂️","🧖‍♀️🧖‍♀️??‍♀️🧖‍♀️🧖‍♀️🧖‍♂️🧖‍♀️🧖‍♀️🧖‍♀️🧖‍♀️")
 name = string.gsub(name,"👬","👭👭👭👭👭👬👭👭👭")
-name = string.gsub(name,"👨‍👨‍👧","👨‍👨‍👦👨‍👨‍👦👨‍👨‍👦👨‍👨‍👦👨‍👨‍👧👨‍👨‍👦👨‍👨‍👦")
+name = string.gsub(name,"👨‍👨‍👧","👨‍👨‍👦👨‍👨‍👦👨‍👨‍👦👨‍👨‍👦👨‍👨‍👧👨‍??‍👦👨‍👨‍👦")
 name = string.gsub(name,"🕒","🕒🕒🕒🕒🕒🕒🕓🕒🕒🕒")
 name = string.gsub(name,"🕤","🕥🕥🕥🕥🕥🕤🕥🕥🕥")
 name = string.gsub(name,"⌛️","⏳⏳⏳⏳⏳⏳⌛️⏳⏳")
