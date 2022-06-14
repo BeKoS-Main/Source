@@ -1355,7 +1355,7 @@ for k,v in pairs(msg.content.member_user_ids) do
 local Info_User = LuaTele.getUser(v) 
 print(v)
 if v == tonumber(black) then
-local N = (Redis:get(black.."Name:Bot") or "بلاك")
+local N = (Redis:get(black.."Name:Bot") or "بيكوس")
 photo = LuaTele.getUserProfilePhotos(black)
 local TextBot = '*⌁ انا بوت اسمي '..N..'\n⌁ وظيفتي حمايه المجموعة من السبام والتفليش الخ....\n⌁ لتفعيل البوت قم اضافته للمجموعتك وقم برفعه مشرف واكتب تفعيل\n*'
 keyboard = {} 
@@ -1364,7 +1364,7 @@ keyboard.inline_keyboard = {
 {text = ' تفعيل ', callback_data = msg.sender.user_id..'/onlinebott'..msg_chat_id},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'},
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'},
 }
 }
 local rep = msg.id/2097152/0.5
@@ -9164,7 +9164,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -10660,7 +10660,7 @@ if Redis:get(black.."kit_defullt:") == "true" then
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هيا عيوب سورس بلاك؟ ", 
+"ما هيا عيوب سورس بيكوس؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
@@ -10676,13 +10676,13 @@ if Redis:get(black.."kit_defullt:") == "true" then
 " ما السيء في هذه الحياة ؟ ", 
 "أجمل شيء حصل معك خلال هذا الاسبوع ؟ ", 
 "سؤال ينرفزك ؟ ", 
-" هل يعجبك سورس بلاك؟ ", 
+" هل يعجبك سورس بيكوس؟ ", 
 " اكثر ممثل تحبه ؟ ", 
 "قد تخيلت شي في بالك وصار ؟ ", 
 "شيء عندك اهم من الناس ؟ ", 
 "تفضّل النقاش الطويل او تحب الاختصار ؟ ", 
 "وش أخر شي ضيعته؟ ", 
-"اي رايك في سورس بلاك؟ ", 
+"اي رايك في سورس بيكوس؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
 " نسبه الندم عندك للي وثقت فيهم ؟", 
@@ -10996,7 +10996,7 @@ if text == "اضف كت" then
         Redis:sadd(black.."kit:", text)
         return send(msg_chat_id,msg_id,"⌁ تم حفظ السؤال","md",false, false, false, false, reply_markup)
     end
-    if text == "بلاك كت" then
+    if text == "بيكوس كت" then
         local list = Redis:smembers(black.."kit:")
         randk = list[math.random(#list)]
         send(msg_chat_id, msg_id,'['..randk..']',"md",true)
@@ -11711,7 +11711,7 @@ if text == "زخرفه" then
       },
     }
     }
-  return send(msg_chat_id,msg_id, "مرحبا بك في زخرفه بلاك","md",false,false,false,false,reply_markup)
+  return send(msg_chat_id,msg_id, "مرحبا بك في زخرفه بيكوس","md",false,false,false,false,reply_markup)
 end
 -- z eng
 if text and text:match("%a") and Redis:get(black..msg_chat_id..msg.sender.user_id.."zkrf:") == "zeng" then
@@ -11808,7 +11808,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' 𝐴𝐵𝑂 𝐴𝐿𝑀𝐴𝐺𝐷', url = 't.me/MO_ABO_el'}, 
+{text = ' 𝚃𝙾𝙼𝙰𝚂 ', url = 't.me/tqqqqqq'}, 
 },
 }
 }
@@ -12064,7 +12064,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {{text = 'ترجمه الي العربية', data = msg.sender.user_id..'toar'},{text = 'ترجمه الي الانجليزية', data = msg.sender.user_id..'toen'}},
-{{text = ' ⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = "https://t.me/SSMMSS"}},
+{{text = ' ⌁ B𝑒K𝑜S ⌁️', url = "https://t.me/SSMMSS"}},
 }
 }
 return send(msg_chat_id,msg_id, [[*
@@ -12171,7 +12171,7 @@ data = {
 {text = '𝑀𝑃3', data = msg.sender.user_id..'/mp3'..msg_id}, {text = '𝑀𝑃4', data = msg.sender.user_id..'/mp4'..msg_id}, 
 },
 {
-{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ', url = "https://t.me/SSMMSS"}
+{text = 'B𝑒K𝑜S ', url = "https://t.me/SSMMSS"}
 },
 }
 }
@@ -13161,7 +13161,7 @@ send(msg.chat_id,msg.id,[[
 ⇠ `ماستر`
 ⇠ `فيزا`
 ⇠ `اكسبرس`
-⇠ `بلاك`
+⇠ `بيكوس`
 
 - اضغط للنسخ
 
@@ -13189,7 +13189,7 @@ Redis:set(black.."boballban"..creditcc,text)
 Redis:set(black.."boballid"..creditcc,banid)
 Redis:sadd(black.."booob",msg.sender.user_id)
 Redis:del(black.."booobb" .. msg.chat_id .. ":" .. msg.sender.user_id) 
-send(msg.chat_id,msg.id, "\n• وسوينا لك حساب في بنك بلاك 🏦\n• وشحنالك 10 جنيه 💵 هدية\n\n•  رقم حسابك ↢ ( `"..creditcc.."` )\n•  نوع البطاقة ↢ ( ماستر 💳 )\n•  فلوسك ↢ ( 10 جنيه 💵 )  ","md",true)  
+send(msg.chat_id,msg.id, "\n• وسوينا لك حساب في بنك بيكوس 🏦\n• وشحنالك 10 ريال 💵 هدية\n\n•  رقم حسابك ↢ ( `"..creditcc.."` )\n•  نوع البطاقة ↢ ( ماستر 💳 )\n•  فلوسك ↢ ( 10 ريال 💵 )  ","md",true)  
 end 
 if text == "فيزا" then
 local ban = LuaTele.getUser(msg.sender.user_id)
@@ -13210,9 +13210,9 @@ Redis:set(black.."boballban"..creditvi,text)
 Redis:set(black.."boballid"..creditvi,banid)
 Redis:sadd(black.."booob",msg.sender.user_id)
 Redis:del(black.."booobb" .. msg.chat_id .. ":" .. msg.sender.user_id) 
-send(msg.chat_id,msg.id, "\n• وسوينا لك حساب في بنك بلاك 🏦\n• وشحنالك 10 جنيه 💵 هدية\n\n•  رقم حسابك ↢ ( `"..creditvi.."` )\n•  نوع البطاقة ↢ ( فيزا 💳 )\n•  فلوسك ↢ ( 10 جنيه 💵 )  ","md",true)   
+send(msg.chat_id,msg.id, "\n• وسوينا لك حساب في بنك بيكوس 🏦\n• وشحنالك 10 ريال 💵 هدية\n\n•  رقم حسابك ↢ ( `"..creditvi.."` )\n•  نوع البطاقة ↢ ( فيزا 💳 )\n•  فلوسك ↢ ( 10 ريال 💵 )  ","md",true)   
 end 
-if text == "بلاك" then
+if text == "بيكوس" then
 local ban = LuaTele.getUser(msg.sender.user_id)
 if ban.first_name then
 news = ""..ban.first_name..""
@@ -13231,7 +13231,7 @@ Redis:set(black.."boballban"..creditvi,text)
 Redis:set(black.."boballid"..creditvi,banid)
 Redis:sadd(black.."booob",msg.sender.user_id)
 Redis:del(black.."booobb" .. msg.chat_id .. ":" .. msg.sender.user_id) 
-send(msg.chat_id,msg.id, "\n• وسوينا لك حساب في بنك بلاك 🏦\n• وشحنالك 10 جنيه 💵 هدية\n\n•  رقم حسابك ↢ ( `"..creditvi.."` )\n•  نوع البطاقة ↢ ( بلاك 💳 )\n•  فلوسك ↢ ( 10 جنيه 💵 )  ","md",true)   
+send(msg.chat_id,msg.id, "\n• وسوينا لك حساب في بنك بيكوس 🏦\n• وشحنالك 10 ريال 💵 هدية\n\n•  رقم حسابك ↢ ( `"..creditvi.."` )\n•  نوع البطاقة ↢ ( بيكوس 💳 )\n•  فلوسك ↢ ( 10 ريال 💵 )  ","md",true)   
 end 
 if text == "اكسبرس" then
 local ban = LuaTele.getUser(msg.sender.user_id)
@@ -13252,22 +13252,38 @@ Redis:set(black.."boballban"..creditex,text)
 Redis:set(black.."boballid"..creditex,banid)
 Redis:sadd(black.."booob",msg.sender.user_id)
 Redis:del(black.."booobb" .. msg.chat_id .. ":" .. msg.sender.user_id) 
-send(msg.chat_id,msg.id, "\n• وسوينا لك حساب في بنك بلاك 🏦\n• وشحنالك 10 جنيه 💵 هدية\n\n•  رقم حسابك ↢ ( `"..creditex.."` )\n•  نوع البطاقة ↢ ( اكسبرس 💳 )\n•  فلوسك ↢ ( 10 جنيه 💵 )  ","md",true)   
+send(msg.chat_id,msg.id, "\n• وسوينا لك حساب في بنك بيكوس 🏦\n• وشحنالك 10 ريال 💵 هدية\n\n•  رقم حسابك ↢ ( `"..creditex.."` )\n•  نوع البطاقة ↢ ( اكسبرس 💳 )\n•  فلوسك ↢ ( 10 ريال 💵 )  ","md",true)   
 end 
 end
 if text == "البنك" then
 local txx = [[
-اوامر لعبه البنك :
-- انشاء حساب بنكي 
-- مسح حسابي
-- فلوسي ، حسابي 
-- تحويل + المبلغ (بعدها يطلب رقم الحساب)
-- ( استثمار ، حظ ، مضاربه ) + المبلغ 
-- راتبي ، راتب
-- بقشيش 
-- هجوم + المبلغ
-- زرف (بالرد)
-- اضف فلوس + المبلغ (بالرد) *للمطور الاساسي فقط*
+✜ اوامر البنك
+
+⌯ *انشاء حساب بنكي*  ↢ تسوي حساب وتقدر تحول فلوس مع مزايا ثانيه
+
+⌯ *مسح حساب بنكي*  ↢ تلغي حسابك البنكي
+
+⌯* تحويل* ↢ تطلب رقم حساب الشخص وتحول له فلوس
+
+⌯ *حسابي*  ↢ يطلع لك رقم حسابك عشان تعطيه للشخص اللي بيحول لك
+
+⌯ *فلوسي* ↢ يعلمك كم فلوسك
+
+⌯* راتب *↢ يعطيك راتبك كل ٢٠ دقيقة
+
+⌯* بخشيش* ↢ يعطيك بخشيش كل ١٠ دقايق
+
+⌯* زرف *↢ تزرف فلوس اشخاص كل ١٠ دقايق
+
+⌯ *استثمار* ↢ تستثمر بالمبلغ اللي تبيه مع نسبة ربح مضمونه من ١٪؜ الى ١٥٪؜
+
+⌯ *حظ* ↢ تلعبها بأي مبلغ ياتدبله ياتخسره انت وحظك
+
+⌯ *مضاربه *↢ تضارب بأي مبلغ تبيه والنسبة من ٩٠٪؜ الى -٩٠٪؜ انت وحظك
+
+⌯ *توب الفلوس* ↢ يطلع توب اكثر ناس معهم فلوس بكل القروبات
+
+⌯ *توب الحراميه* ↢ يطلع لك اكثر ناس زرفوا
 
 ]]
 send(msg.chat_id,msg.id,txx,"md")
@@ -13302,7 +13318,7 @@ ballancee = Redis:get(black.."boob"..msg.sender.user_id) or 0
 if tonumber(ballancee) < 1 then
 return send(msg.chat_id,msg.id, "•  ماعندك فلوس ارسل الالعاب وابدأ بجمع الفلوس \n✦","md",true)
 end
-send(msg.chat_id,msg.id, "•  فلوسك "..ballancee.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id, "•  فلوسك "..ballancee.." ريال 💵","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -13312,12 +13328,12 @@ if text == 'فلوسه' or text == 'فلوس' and tonumber(msg.reply_to_message_
 local Remsg = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
 local UserInfo = LuaTele.getUser(Remsg.sender.user_id)
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-send(msg.chat_id,msg.id,"\n*•  بلاك ماعنده حساب بالبنك 🤣*","md",true)  
+send(msg.chat_id,msg.id,"\n*•  بيكوس ماعنده حساب بالبنك 🤣*","md",true)  
 return false
 end
 if Redis:sismember(black.."booob",Remsg.sender.user_id) then
 ballanceed = Redis:get(black.."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "•  فلوسه "..ballanceed.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id, "•  فلوسه "..ballanceed.." ريال 💵","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
@@ -13335,7 +13351,7 @@ cccc = Redis:get(black.."boobb"..msg.sender.user_id)
 uuuu = Redis:get(black.."bbobb"..msg.sender.user_id)
 pppp = Redis:get(black.."zrfff"..msg.sender.user_id) or 0
 ballancee = Redis:get(black.."boob"..msg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..cccc.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..uuuu.." )\n•  الرصيد ↢ ( "..ballancee.." جنيه 💵 )\n•  الزرف ( "..pppp.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..cccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuu.." )\n•  الرصيد ↢ ( "..ballancee.." ريال 💵 )\n•  الزرف ( "..pppp.." ريال 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -13346,7 +13362,7 @@ if msg.ControllerBot then
 local Remsg = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
 local UserInfo = LuaTele.getUser(Remsg.sender.user_id)
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-send(msg.chat_id,msg.id,"\n*•  بلاك ماعنده حساب بالبنك 🤣*","md",true)  
+send(msg.chat_id,msg.id,"\n*•  بيكوس ماعنده حساب بالبنك 🤣*","md",true)  
 return false
 end
 local ban = LuaTele.getUser(Remsg.sender.user_id)
@@ -13365,7 +13381,7 @@ Redis:del(black.."boob"..Remsg.sender.user_id)
 Redis:del(black.."boobb"..Remsg.sender.user_id)
 Redis:del(black.."zrfff"..Remsg.sender.user_id)
 Redis:srem(black.."zrfffid", Remsg.sender.user_id)
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..uuuuu.." )\n•  الرصيد ↢ ( "..ballanceed.." جنيه 💵 )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  مسكين مسحت حسابه \n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الرصيد ↢ ( "..ballanceed.." ريال 💵 )\n•  الزرف ↢ ( "..ppppp.." ريال 💵 )\n•  مسكين مسحت حسابه \n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي اصلاً ","md",true)
 end
@@ -13376,7 +13392,7 @@ if text == 'حسابه' and tonumber(msg.reply_to_message_id) ~= 0 then
 local Remsg = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
 local UserInfo = LuaTele.getUser(Remsg.sender.user_id)
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-send(msg.chat_id,msg.id,"\n*•  بلاك ماعنده حساب بالبنك 🤣*","md",true)  
+send(msg.chat_id,msg.id,"\n*•  بيكوس ماعنده حساب بالبنك 🤣*","md",true)  
 return false
 end
 local ban = LuaTele.getUser(Remsg.sender.user_id)
@@ -13390,7 +13406,7 @@ ccccc = Redis:get(black.."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(black.."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(black.."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(black.."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..uuuuu.." )\n•  الرصيد ↢ ( "..ballanceed.." جنيه 💵 )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الرصيد ↢ ( "..ballanceed.." ريال 💵 )\n•  الزرف ↢ ( "..ppppp.." ريال 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
@@ -13427,7 +13443,7 @@ Redis:del(black.."boob"..coniss)
 Redis:del(black.."boobb"..coniss)
 Redis:del(black.."zrfff"..coniss)
 Redis:srem(black.."zrfffid", coniss)
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..uuuuu.." )\n•  الرصيد ↢ ( "..ballanceed.." جنيه 💵 )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  مسكين مسحت حسابه \n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الرصيد ↢ ( "..ballanceed.." ريال 💵 )\n•  الزرف ↢ ( "..ppppp.." ريال 💵 )\n•  مسكين مسحت حسابه \n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي اصلاً ","md",true)
 end
@@ -13452,7 +13468,7 @@ if Redis:get(black.."boballcc"..coniss) then
 local yty = Redis:get(black.."boballname"..coniss)
 local dfhb = Redis:get(black.."boballbalc"..coniss)
 local fsvhh = Redis:get(black.."boballban"..coniss)
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..yty.."\n•  الحساب ↢ `"..coniss.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..fsvhh.." )\n•  الرصيد ↢ ( "..dfhb.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..yty.."\n•  الحساب ↢ `"..coniss.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..fsvhh.." )\n•  الرصيد ↢ ( "..dfhb.." ريال 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  مافيه حساب بنكي كذا","md",true)
 end
@@ -13483,7 +13499,7 @@ return send(msg.chat_id,msg.id,"•  مايمديك تضارب الحين\n•  
 end
 ballancee = Redis:get(black.."boob"..msg.sender.user_id) or 0
 if tonumber(coniss) < 99 then
-return send(msg.chat_id,msg.id, "•  الحد الادنى المسموح هو 100 جنيه 💵\n✦","md",true)
+return send(msg.chat_id,msg.id, "•  الحد الادنى المسموح هو 100 ريال 💵\n✦","md",true)
 end
 if tonumber(ballancee) < tonumber(coniss) then
 return send(msg.chat_id,msg.id, "•  فلوسك ماتكفي \n✦","md",true)
@@ -13496,13 +13512,13 @@ ballanceekku = coniss / 100 * modarbaa
 ballanceekkku = ballancee - ballanceekku
 Redis:set(black.."boob"..msg.sender.user_id , math.floor(ballanceekkku))
 Redis:setex(black.."iiooooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "•  مضاربة فاشلة 📉\n•  نسبة الخسارة ↢ "..modarbaa.."%\n•  المبلغ الذي خسرته ↢ ( "..ballanceekku.." جنيه 💵 )\n•  فلوسك صارت ↢ ( "..ballanceekkku.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  مضاربة فاشلة 📉\n•  نسبة الخسارة ↢ "..modarbaa.."%\n•  المبلغ الذي خسرته ↢ ( "..ballanceekku.." ريال 💵 )\n•  فلوسك صارت ↢ ( "..ballanceekkku.." ريال 💵 )\n✦","md",true)
 elseif Descriptioontt == "2" or Descriptioontt == "4" then
 ballanceekku = coniss / 100 * modarbaa
 ballanceekkku = ballancee + ballanceekku
 Redis:set(black.."boob"..msg.sender.user_id , math.floor(ballanceekkku))
 Redis:setex(black.."iiooooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "•  مضاربة ناجحة 📈\n•  نسبة الربح ↢ "..modarbaa.."%\n•  المبلغ الذي ربحته ↢ ( "..ballanceekku.." جنيه 💵 )\n•  فلوسك صارت ↢ ( "..ballanceekkku.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  مضاربة ناجحة 📈\n•  نسبة الربح ↢ "..modarbaa.."%\n•  المبلغ الذي ربحته ↢ ( "..ballanceekku.." ريال 💵 )\n•  فلوسك صارت ↢ ( "..ballanceekkku.." ريال 💵 )\n✦","md",true)
 else
 Redis:setex(black.."iiooooo" .. msg.sender.user_id,1200, true)
 send(msg.chat_id,msg.id, "•  تأخرت اليوم والبنك مسكر ارجع بعدين \n✦","md",true)
@@ -13537,7 +13553,7 @@ return send(msg.chat_id,msg.id,"•  مايمديك تستثمر الحين\n•
 end
 ballancee = Redis:get(black.."boob"..msg.sender.user_id) or 0
 if tonumber(coniss) < 99 then
-return send(msg.chat_id,msg.id, "•  الحد الادنى المسموح هو 100 جنيه 💵\n✦","md",true)
+return send(msg.chat_id,msg.id, "•  الحد الادنى المسموح هو 100 ريال 💵\n✦","md",true)
 end
 if tonumber(ballancee) < tonumber(coniss) then
 return send(msg.chat_id,msg.id, "•  فلوسك ماتكفي \n✦","md",true)
@@ -13547,7 +13563,7 @@ ballanceekk = coniss / 100 * hadddd
 ballanceekkk = ballancee + ballanceekk
 Redis:incrby(black.."boob"..msg.sender.user_id , math.floor(ballanceekk))
 Redis:setex(black.."iioooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "•  استثمار ناجح 💰\n•  نسبة الربح ↢ "..hadddd.."%\n•  مبلغ الربح ↢ ( "..ballanceekk.." جنيه 💵 )\n•  فلوسك صارت ↢ ( "..ballanceekkk.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  استثمار ناجح 💰\n•  نسبة الربح ↢ "..hadddd.."%\n•  مبلغ الربح ↢ ( "..ballanceekk.." ريال 💵 )\n•  فلوسك صارت ↢ ( "..ballanceekkk.." ريال 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
@@ -13587,12 +13603,12 @@ if haddd == "1" or haddd == "3" then
 local ballanceek = ballancee + coniss
 Redis:incrby(black.."boob"..msg.sender.user_id , coniss)
 Redis:setex(black.."iiooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "•  مبروك فزت بالحظ 🎉\n•  فلوسك قبل ↢ ( "..ballancee.." جنيه 💵 )\n•  فلوسك الحين ↢ ( "..ballanceek.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  مبروك فزت بالحظ 🎉\n•  فلوسك قبل ↢ ( "..ballancee.." ريال 💵 )\n•  فلوسك الحين ↢ ( "..ballanceek.." ريال 💵 )\n✦","md",true)
 else
 local ballanceekk = ballancee - coniss
 Redis:decrby(black.."boob"..msg.sender.user_id , coniss)
 Redis:setex(black.."iiooo" .. msg.sender.user_id,1200, true)
-send(msg.chat_id,msg.id, "•  للاسف خسرت بالحظ 😬\n•  فلوسك قبل ↢ ( "..ballancee.." جنيه 💵 )\n•  فلوسك الحين ↢ ( "..ballanceekk.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  للاسف خسرت بالحظ 😬\n•  فلوسك قبل ↢ ( "..ballancee.." ريال 💵 )\n•  فلوسك الحين ↢ ( "..ballanceekk.." ريال 💵 )\n✦","md",true)
 end
 else
 send(msg.chat_id,msg.id, "•  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -13622,7 +13638,7 @@ if not Redis:sismember(black.."booob",msg.sender.user_id) then
 return send(msg.chat_id,msg.id, "•  ماعندك حساب بنكي ","md",true)
 end
 if tonumber(coniss) < 100 then
-return send(msg.chat_id,msg.id, "•  الحد الادنى المسموح به هو 100 جنيه \n✦","md",true)
+return send(msg.chat_id,msg.id, "•  الحد الادنى المسموح به هو 100 ريال \n✦","md",true)
 end
 ballancee = Redis:get(black.."boob"..msg.sender.user_id) or 0
 if tonumber(ballancee) < 100 then
@@ -13676,8 +13692,8 @@ UserNameyr = UserNamey / 10
 UserNameyy = UserNamey - UserNameyr
 Redis:decrby(black.."boob"..msg.sender.user_id , UserNamey)
 Redis:incrby(black.."boob"..fsvhhh , math.floor(UserNameyy))
-send(msg.chat_id,msg.id, "حوالة صادرة من بنك بلاك\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمستلم : "..newss.."\nالحساب رقم : `"..text.."`\nنوع البطاقة : "..fsvhh.."\nخصمت 10% رسوم تحويل\nالمبلغ : "..UserNameyy.." جنيه 💵","md",true)
-send(fsvhhh,0, "حوالة واردة من بنك بلاك\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمبلغ : "..UserNameyy.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id, "حوالة صادرة من بنك بيكوس\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمستلم : "..newss.."\nالحساب رقم : `"..text.."`\nنوع البطاقة : "..fsvhh.."\nخصمت 10% رسوم تحويل\nالمبلغ : "..UserNameyy.." ريال 💵","md",true)
+send(fsvhhh,0, "حوالة واردة من بنك بيكوس\n\nالمرسل : "..news.."\nالحساب رقم : `"..cccc.."`\nنوع البطاقة : "..uuuu.."\nالمبلغ : "..UserNameyy.." ريال 💵","md",true)
 Redis:del(black.."trans" .. msg.chat_id .. ":" .. msg.sender.user_id) 
 Redis:del(black.."transn" .. msg.sender.user_id)
 else
@@ -13706,7 +13722,7 @@ if msg.ControllerBot then
 local Remsg = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
 local UserInfo = LuaTele.getUser(Remsg.sender.user_id)
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-send(msg.chat_id,msg.id,"\n*•  بلاك ماعنده حساب بالبنك 🤣*","md",true)  
+send(msg.chat_id,msg.id,"\n*•  بيكوس ماعنده حساب بالبنك 🤣*","md",true)  
 return false
 end
 local ban = LuaTele.getUser(Remsg.sender.user_id)
@@ -13721,7 +13737,7 @@ ccccc = Redis:get(black.."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(black.."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(black.."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(black.."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." ريال 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." ريال 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
@@ -13746,7 +13762,7 @@ if msg.ControllerBot then
 local Remsg = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
 local UserInfo = LuaTele.getUser(Remsg.sender.user_id)
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-send(msg.chat_id,msg.id,"\n*•  بلاك ماعنده حساب بالبنك 🤣*","md",true)  
+send(msg.chat_id,msg.id,"\n*•  بيكوس ماعنده حساب بالبنك 🤣*","md",true)  
 return false
 end
 local ban = LuaTele.getUser(Remsg.sender.user_id)
@@ -13761,7 +13777,7 @@ ccccc = Redis:get(black.."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(black.."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(black.."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(black.."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." ريال 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." ريال 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
@@ -13861,7 +13877,7 @@ return send(msg.chat_id,msg.id,"•  من شوي اخذت بخشيش استنى 
 end
 local jjjo = math.random(1,200);
 Redis:incrby(black.."boob"..msg.sender.user_id , jjjo)
-send(msg.chat_id,msg.id,"•  تكرم وهي بخشيش "..jjjo.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id,"•  تكرم وهي بخشيش "..jjjo.." ريال 💵","md",true)
 Redis:setex(black.."iioo" .. msg.sender.user_id,600, true)
 else
 send(msg.chat_id,msg.id, "•  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -13894,7 +13910,7 @@ end
 if Redis:sismember(black.."booob",Remsg.sender.user_id) then
 ballanceed = Redis:get(black.."boob"..Remsg.sender.user_id) or 0
 if tonumber(ballanceed) < 199 then
-return send(msg.chat_id,msg.id, "•  مايمديك تزرفه فلوسه اقل من 200 جنيه 💵","md",true)
+return send(msg.chat_id,msg.id, "•  مايمديك تزرفه فلوسه اقل من 200 ريال 💵","md",true)
 end
 local hrame = math.floor(math.random() * 200) + 1;
 local hramee = math.floor(math.random() * 5) + 1;
@@ -13905,7 +13921,7 @@ Redis:decrby(black.."boob"..Remsg.sender.user_id , hrame)
 Redis:setex(black.."hrame" .. Remsg.sender.user_id,900, true)
 Redis:incrby(black.."zrfff"..msg.sender.user_id,hrame)
 Redis:sadd(black.."zrfffid",msg.sender.user_id)
-send(msg.chat_id,msg.id, "•  خذ يالحرامي زرفته "..hrame.." جنيه 💵\n✦","md",true)
+send(msg.chat_id,msg.id, "•  خذ يالحرامي زرفته "..hrame.." ريال 💵\n✦","md",true)
 else
 Redis:setex(black.."polic" .. msg.sender.user_id,300, true)
 send(msg.chat_id,msg.id, "•  مسكتك الشرطة وانتا تزرف 🚔\n✦","md",true)
@@ -13963,7 +13979,7 @@ ratbk = "5000"
 your_job = "فتاحه 💋"
 end
 local ballancee = Redis:get(black.."boob"..msg.sender.user_id) or 0
-send(msg.chat_id,msg.id,"• اشعار ايداع "..neews.."\n• وظيفتك : "..your_job.."\n• المبلغ : "..ratbk.." جنيه 💵\n• نوع العملية : اضافة راتب\n• رصيدك الحين : "..ballancee.." جنيه 💵","md",true)
+send(msg.chat_id,msg.id,"• اشعار ايداع "..neews.."\n• وظيفتك : "..your_job.."\n• المبلغ : "..ratbk.." ريال 💵\n• نوع العملية : اضافة راتب\n• رصيدك الحين : "..ballancee.." ريال 💵","md",true)
 Redis:setex(black.."iiioo" .. msg.sender.user_id,600, true)
 else
 send(msg.chat_id,msg.id, "•  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
@@ -14040,22 +14056,22 @@ if text == 'مميز' and tonumber(balance)  >= 2000 then
 Redis:decrby(black.."boob"..msg.sender.user_id , 2000)
 Redis:sadd(black.."Special:Group"..msg_chat_id,msg.sender.user_id) 
 Redis:del(black..msg.chat_id..msg.sender.user_id.."txtrtb") 
-return send(msg.chat_id,msg.id,"• تم رفعك مميز بنجاح وخصم 3000 جنيه من فلوسك")
+return send(msg.chat_id,msg.id,"• تم رفعك مميز بنجاح وخصم 3000 ريال من فلوسك")
 elseif text == "ادمن" and tonumber(balance)  >= 4000 then
 Redis:decrby(black.."boob"..msg.sender.user_id , 4000)
 Redis:sadd(black.."Admin:Group"..msg_chat_id,msg.sender.user_id) 
 Redis:del(black..msg.chat_id..msg.sender.user_id.."txtrtb") 
-return send(msg.chat_id,msg.id,"• تم رفعك ادمن بنجاح وخصم 4000 جنيه من فلوسك")
+return send(msg.chat_id,msg.id,"• تم رفعك ادمن بنجاح وخصم 4000 ريال من فلوسك")
 elseif text == "مدير" and tonumber(balance)  >= 6000 then
 Redis:decrby(black.."boob"..msg.sender.user_id , 6000)
 Redis:sadd(black.."Manger:Group"..msg_chat_id,msg.sender.user_id) 
 Redis:del(black..msg.chat_id..msg.sender.user_id.."txtrtb") 
-return send(msg.chat_id,msg.id,"• تم رفعك مدير بنجاح وخصم 6000 جنيه من فلوسك")
+return send(msg.chat_id,msg.id,"• تم رفعك مدير بنجاح وخصم 6000 ريال من فلوسك")
 elseif text == "منشئ" and tonumber(balance)  >= 8000 then 
 Redis:decrby(black.."boob"..msg.sender.user_id , 8000)
 Redis:sadd(black.."Creator:Group"..msg_chat_id,msg.sender.user_id) 
 Redis:del(black..msg.chat_id..msg.sender.user_id.."txtrtb") 
-return send(msg.chat_id,msg.id,"• تم رفعك منشئ بنجاح وخصم 8000 جنيه من فلوسك")
+return send(msg.chat_id,msg.id,"• تم رفعك منشئ بنجاح وخصم 8000 ريال من فلوسك")
 end
 end
 if text == "شراء رتبه" then
@@ -14070,13 +14086,13 @@ if tonumber(balance) < 2000 then
 return send(msg.chat_id,msg.id,"• فلوسك لا تكفي لشراء اي رتبه")
 end
 if tonumber(balance)  >= 2000 and tonumber(balance) < 4000 then
-Txtrtb = "• الرتب اللتي يمكنك شرائها هي \n\n• `مميز` (2000 جنيه) \n\n • اضغط علي الرتبه ليتم نسخها"
+Txtrtb = "• الرتب اللتي يمكنك شرائها هي \n\n• `مميز` (2000 ريال) \n\n • اضغط علي الرتبه ليتم نسخها"
 elseif tonumber(balance) >= 4000 and tonumber(balance) < 6000 then
-Txtrtb = "• الرتب اللتي يمكنك شرائها هي \n\n• `مميز` (2000 جنيه)\n• `ادمن` (4000 جنيه) \n\n • اضغط علي الرتبه ليتم نسخها"
+Txtrtb = "• الرتب اللتي يمكنك شرائها هي \n\n• `مميز` (2000 ريال)\n• `ادمن` (4000 ريال) \n\n • اضغط علي الرتبه ليتم نسخها"
 elseif tonumber(balance) >= 6000 and tonumber(balance) < 8000 then
-Txtrtb = "• الرتب اللتي يمكنك شرائها هي \n\n• `مميز` (2000 جنيه)\n• `ادمن` (4000 جنيه) \n• `مدير` (6000 جنيه)\n\n • اضغط علي الرتبه ليتم نسخها"
+Txtrtb = "• الرتب اللتي يمكنك شرائها هي \n\n• `مميز` (2000 ريال)\n• `ادمن` (4000 ريال) \n• `مدير` (6000 ريال)\n\n • اضغط علي الرتبه ليتم نسخها"
 elseif tonumber(balance) >= 8000 then
-Txtrtb = "• الرتب اللتي يمكنك شرائها هي \n\n• `مميز` (2000 جنيه)\n• `ادمن` (4000 جنيه) \n• `مدير` (6000 جنيه)\n• `منشئ` (8000 جنيه)\n\n • اضغط علي الرتبه ليتم نسخها"
+Txtrtb = "• الرتب اللتي يمكنك شرائها هي \n\n• `مميز` (2000 ريال)\n• `ادمن` (4000 ريال) \n• `مدير` (6000 ريال)\n• `منشئ` (8000 ريال)\n\n • اضغط علي الرتبه ليتم نسخها"
 end
 Redis:setex(black..msg.chat_id..msg.sender.user_id.."txtrtb",180,true)
 return send(msg.chat_id,msg.id,Txtrtb,"md")
@@ -14102,7 +14118,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆??𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14113,7 +14129,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14124,7 +14140,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14135,7 +14151,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14146,7 +14162,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14157,7 +14173,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14168,7 +14184,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14179,7 +14195,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾', url = 't.me/SSMMSS'}, 
+{text = 'B𝑒K𝑜S', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14190,7 +14206,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14201,7 +14217,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14212,7 +14228,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14223,7 +14239,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14234,7 +14250,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14245,7 +14261,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14256,7 +14272,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14267,7 +14283,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14279,7 +14295,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14290,7 +14306,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14301,7 +14317,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14312,7 +14328,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14323,7 +14339,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14334,7 +14350,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14345,7 +14361,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14356,7 +14372,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14367,7 +14383,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14378,7 +14394,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14389,7 +14405,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14400,7 +14416,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14411,7 +14427,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14422,7 +14438,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾', url = 't.me/SSMMSS'}, 
+{text = 'B𝑒K𝑜S', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14433,7 +14449,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14444,7 +14460,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14455,7 +14471,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14466,7 +14482,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14477,7 +14493,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14488,7 +14504,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14499,7 +14515,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14510,7 +14526,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14521,7 +14537,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14532,7 +14548,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14543,7 +14559,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14554,7 +14570,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14565,7 +14581,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14576,7 +14592,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14587,7 +14603,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/SSMMSS'}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/SSMMSS'}, 
 },
 }
 }
@@ -14715,7 +14731,7 @@ Abs = math.random(2,140);
 local Text ='*✘︙تم اختيار الشعر لك فقط*'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '⧫ ⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️️ ⧫',url="t.me/SSMMSS"}},
+{{text = '⧫ ⌁ B𝑒K𝑜S ⌁️️ ⧫',url="t.me/SSMMSS"}},
 }
 local msg_id = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token..'/sendVoice?chat_id=' .. msg.chat_id .. '&voice=https://t.me/QQNNSX/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -14744,7 +14760,7 @@ data = {
 {text = '0', data = msg.sender.user_id..'calc&0'},{text = '.', data = msg.sender.user_id..'calc&.'},{text = '+', data = msg.sender.user_id..'calc&+'},{text = '=', data = msg.sender.user_id..'equal'},
 },
 {
-{text = 'مطور السورس', url = 'https://t.me/php57'},
+{text = 'مطور السورس', url = 'https://t.me/JJJ22J'},
 },
 }
 }
@@ -14788,7 +14804,7 @@ if text then
 if text:match("^بحث (.*)$") then
 local search = text:match("^بحث (.*)$")
 local json = json:decode(http.request("https://api-jack.ml/api18.php?search="..URL.escape(search)..""))
-local datar = {data = {{text = "⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁" , url = 'https://t.me/SSMMSS'}}}
+local datar = {data = {{text = "⌁ B𝑒K𝑜S ⌁" , url = 'https://t.me/SSMMSS'}}}
 for i = 1,5 do
 title = json.results[i].title
 link = json.results[i].url
@@ -15219,13 +15235,13 @@ if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or te
 photo = "https://t.me/photojack14366/58"
 local T =[[
 ــــــــــــــــــــــ⌁ـــــــــــــــــــــ
- ⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁
+ ⌁ B𝑒K𝑜S ⌁
 ــــــــــــــــــــــ⌁ـــــــــــــــــــــ
-⌁ 𝐷𝐸𝑉 >> [˹ 𝐽𝐴𝐶𝐾 .](t.me/PHP57)
+⌁ 𝐷𝐸𝑉 >> [˹ ＢＥＲＯ ム  .](t.me/JJJ22J)
 ــــــــــــــــــــــ⌁ـــــــــــــــــــــ 
-⌁ 𝐷𝐸𝑉 >> [˹ 𝐴𝐵𝑂 𝐴𝐿𝑀𝐴𝐺𝐷 .](t.me/MO_ABO_el)
+⌁ 𝐷𝐸𝑉 >> [˹ 𝚃𝙾𝙼𝙰𝚂  .](t.me/tqqqqqq)
 ــــــــــــــــــــــ⌁ـــــــــــــــــــــ 
-⌁ـــ⌁ >> [˹ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 .](t.me/SSMMSS)
+⌁ـــ⌁ >> [˹ B𝑒K𝑜S .](t.me/SSMMSS)
 ــــــــــــــــــــــ⌁ـــــــــــــــــــــ 
 ]]
 keyboard = {} 
@@ -15234,7 +15250,7 @@ keyboard.inline_keyboard = {
 {text = '🖤 𝑱𝑨𝑪𝑲 🖤', url = "https://t.me/JJJ22J"},
 },
 {
-{text = '𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ', url = "https://t.me/SSMMSS"}
+{text = 'B𝑒K𝑜S ', url = "https://t.me/SSMMSS"}
 },
 }
 local msgg = msg_id/2097152/0.5
@@ -15267,7 +15283,7 @@ data = {
 {text = 'اوامر القفل', data = msg.sender.user_id..'/NoNextSeting'}, {text = 'اوامر التعطيل', data = msg.sender.user_id..'/listallAddorrem'}, 
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -15297,7 +15313,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -15318,7 +15334,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -15339,7 +15355,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -15360,7 +15376,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -15381,7 +15397,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -15402,7 +15418,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -15423,7 +15439,7 @@ data = {
 {text = ' قائمه الاوامر ', data = msg.sender.user_id..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -15469,7 +15485,7 @@ end
 Redis:del(black.."Name:Bot") 
 return send(msg_chat_id,msg_id,"⌁ تم حذف اسم البوت ","md",true)   
 end
-if text == (Redis:get(black.."Name:Bot") or "بلاك") then
+if text == (Redis:get(black.."Name:Bot") or "بيكوس") then
 if Redis:get(black.."name bot type : ") == "photo" then
   local photo = LuaTele.getUserProfilePhotos(black)
   local UserInfo = LuaTele.getUser(black)
@@ -15487,33 +15503,33 @@ if Redis:get(black.."name bot type : ") == "photo" then
   }
   
   if photo.total_count > 0 then
-    local NamesBot = (Redis:get(black.."Name:Bot") or "بلاك")
+    local NamesBot = (Redis:get(black.."Name:Bot") or "بيكوس")
     local NameBots = {
 "قلب "..NamesBot ,
 "مين مزعلك بس يعيوني",
 "ثانيه واحده بسلك رقم واحده",
-"انا مش فاضي بلاك مكاني اهو",
+"انا مش فاضي بيكوس مكاني اهو",
 "قلبه ودقاته وكل حياته"
 }
   return LuaTele.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,NameBots[math.random(#NameBots)], "md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
   else
-    local NamesBot = (Redis:get(black.."Name:Bot") or "بلاك")
+    local NamesBot = (Redis:get(black.."Name:Bot") or "بيكوس")
     local NameBots = {
 "قلب "..NamesBot ,
 "مين مزعلك بس يعيوني",
 "ثانيه واحده بسلك رقم واحده",
-"انا مش فاضي بلاك مكاني اهو",
+"انا مش فاضي بيكوس مكاني اهو",
 "قلبه ودقاته وكل حياته"
 }
   return send(msg_chat_id,msg_id,NameBots[math.random(#NameBots)],"md") 
   end 
   end
-      local NamesBot = (Redis:get(black.."Name:Bot") or "بلاك")
+      local NamesBot = (Redis:get(black.."Name:Bot") or "بيكوس")
     local NameBots = {
 "قلب "..NamesBot ,
 "مين مزعلك بس يعيوني",
 "ثانيه واحده بسلك رقم واحده",
-"انا مش فاضي بلاك مكاني اهو",
+"انا مش فاضي بيكوس مكاني اهو",
 "قلبه ودقاته وكل حياته"
 }
   return send(msg_chat_id,msg_id,NameBots[math.random(#NameBots)],"md") 
@@ -15540,7 +15556,7 @@ if Redis:get(black.."name bot type : ") == "photo" then
     }
     
     if photo.total_count > 0 then
-      local NamesBot = (Redis:get(black.."Name:Bot") or "بلاك")
+      local NamesBot = (Redis:get(black.."Name:Bot") or "بيكوس")
       local BotName = {
       "اسمي "..NamesBot.." يبن العاميه",
       "يارب يكون موضوع مهم بس",
@@ -15550,7 +15566,7 @@ if Redis:get(black.."name bot type : ") == "photo" then
       }
     return LuaTele.sendPhoto(msg.chat_id, msg.id, photo.photos[1].sizes[#photo.photos[1].sizes].photo.remote.id,BotName[math.random(#BotName)], "md", true, nil, nil, nil, nil, nil, nil, nil, nil, reply_markup )
     else
-      local NamesBot = (Redis:get(black.."Name:Bot") or "بلاك")
+      local NamesBot = (Redis:get(black.."Name:Bot") or "بيكوس")
       local BotName = {
       "اسمي "..NamesBot.." يبن العاميه",
       "يارب يكون موضوع مهم بس",
@@ -15561,7 +15577,7 @@ if Redis:get(black.."name bot type : ") == "photo" then
     return send(msg_chat_id,msg_id,BotName[math.random(#BotName)],"md") 
     end 
     end
-          local NamesBot = (Redis:get(black.."Name:Bot") or "بلاك")
+          local NamesBot = (Redis:get(black.."Name:Bot") or "بيكوس")
       local BotName = {
       "اسمي "..NamesBot.." يبن العاميه",
       "يارب يكون موضوع مهم بس",
@@ -15656,7 +15672,7 @@ local texting = {"اخر افلام شاهدتها",
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هيا عيوب سورس بلاك؟ ", 
+"ما هيا عيوب سورس بيكوس؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
@@ -15672,13 +15688,13 @@ local texting = {"اخر افلام شاهدتها",
 " ما السيء في هذه الحياة ؟ ", 
 "أجمل شيء حصل معك خلال هذا الاسبوع ؟ ", 
 "سؤال ينرفزك ؟ ", 
-" هل يعجبك سورس بلاك؟ ", 
+" هل يعجبك سورس بيكوس؟ ", 
 " اكثر ممثل تحبه ؟ ", 
 "قد تخيلت شي في بالك وصار ؟ ", 
 "شيء عندك اهم من الناس ؟ ", 
 "تفضّل النقاش الطويل او تحب الاختصار ؟ ", 
 "وش أخر شي ضيعته؟ ", 
-"اي رايك في سورس بلاك؟ ", 
+"اي رايك في سورس بيكوس؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
 " نسبه الندم عندك للي وثقت فيهم ؟", 
@@ -16006,7 +16022,7 @@ end
 end
 if text == "الاسرع" or text == "ترتيب" then
 if Redis:get(black.."Status:Games"..msg.chat_id) then
-KlamSpeed = {"سحور","سياره","استقبال","قنفذ","ايفون","بزونه","مطبخ","كرستيانو","دجاجه","مدرسه","الوان","غرفه","ثلاجه","قهوه","سفينه","بلاك","محطه","طياره","رادار","منزل","مستشفى","كهرباء","تفاحه","اخطبوط","سلمون","فرنسا","برتقاله","تفاح","مطرقه","لعبه","شباك","باص","سمكه","ذباب","تلفاز","حاسوب","انترنت","ساحه","جسر"};
+KlamSpeed = {"سحور","سياره","استقبال","قنفذ","ايفون","بزونه","مطبخ","كرستيانو","دجاجه","مدرسه","الوان","غرفه","ثلاجه","قهوه","سفينه","بيكوس","محطه","طياره","رادار","منزل","مستشفى","كهرباء","تفاحه","اخطبوط","سلمون","فرنسا","برتقاله","تفاح","مطرقه","لعبه","شباك","باص","سمكه","ذباب","تلفاز","حاسوب","انترنت","ساحه","جسر"};
 name = KlamSpeed[math.random(#KlamSpeed)]
 Redis:set(black.."Game:Monotonous"..msg.chat_id,name)
 name = string.gsub(name,"سحور","س ر و ح")
@@ -16014,7 +16030,7 @@ name = string.gsub(name,"سياره","ه ر س ي ا")
 name = string.gsub(name,"استقبال","ل ب ا ت ق س ا")
 name = string.gsub(name,"قنفذ","ذ ق ن ف")
 name = string.gsub(name,"ايفون","و ن ف ا")
-name = string.gsub(name,"بلاك","ر و ف ر ي")
+name = string.gsub(name,"بيكوس","ر و ف ر ي")
 name = string.gsub(name,"مطبخ","خ ب ط م")
 name = string.gsub(name,"كرستيانو","س ت ا ن و ك ر ي")
 name = string.gsub(name,"دجاجه","ج ج ا د ه")
@@ -16307,7 +16323,7 @@ name = string.gsub(name,"👨‍🔧","👩‍🔧👩‍🔧👩‍🔧👩‍�
 name = string.gsub(name,"👩‍🍳","👨‍🍳👨‍🍳👨‍🍳👨‍🍳👨‍🍳👩‍🍳👨‍🍳👨‍🍳👨‍🍳")
 name = string.gsub(name,"🧚‍♀","🧚‍♂🧚‍♂🧚‍♂🧚‍♂🧚‍♀🧚‍♂🧚‍♂")
 name = string.gsub(name,"🧜‍♂","🧜‍♀🧜‍♀🧜‍♀🧜‍♀🧜‍♀🧚‍♂🧜‍♀🧜‍♀🧜‍♀")
-name = string.gsub(name,"🧝‍♂","🧝‍♀🧝‍♀🧝‍♀??‍♀🧝‍♀🧝‍♂🧝‍♀🧝‍♀🧝‍♀")
+name = string.gsub(name,"🧝‍♂","🧝‍♀🧝‍♀🧝‍♀🧝‍♀🧝‍♀🧝‍♂🧝‍♀🧝‍♀🧝‍♀")
 name = string.gsub(name,"🙍‍♂️","🙎‍♂️🙎‍♂️🙎‍♂️🙎‍♂️🙎‍♂️🙍‍♂️🙎‍♂️🙎‍♂️🙎‍♂️")
 name = string.gsub(name,"🧖‍♂️","🧖‍♀️🧖‍♀️??‍♀️🧖‍♀️🧖‍♀️🧖‍♂️🧖‍♀️🧖‍♀️🧖‍♀️🧖‍♀️")
 name = string.gsub(name,"👬","👭👭👭👭👭👬👭👭👭")
@@ -16627,7 +16643,7 @@ Redis:sadd(black..'Num:User:Pv',msg.sender.user_id)
 if not msg.Devss then
 local photo = LuaTele.getUserProfilePhotos(black)
 if not Redis:get(black.."Start:Bot") then
-local CmdStart = '*\n⌁ أهلآ بك في بوت '..(Redis:get(black.."Name:Bot") or "بلاك")..
+local CmdStart = '*\n⌁ أهلآ بك في بوت '..(Redis:get(black.."Name:Bot") or "بيكوس")..
 '\n⌁ اختصاص البوت حماية المجموعات'..
 '\n⌁ لتفعيل البوت عليك اتباع مايلي ...'..
 '\n⌁ اضف البوت الى مجموعتك'..
@@ -16641,7 +16657,7 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -16654,7 +16670,7 @@ data = {
 {text = '➕ اضفني لمجموعتك', url = 't.me/'..UserBot..'?startgroup=new'}, 
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -16664,7 +16680,7 @@ else
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = 'مطور السورس ⌁',type = 'text'},{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️',type = 'text'},
+{text = 'مطور السورس ⌁',type = 'text'},{text = '⌁ B𝑒K𝑜S ⌁️',type = 'text'},
 },
 {
 {text = 'تعيين قناه السورس ⌁',type = 'text'},{text = 'تعيين مطور السورس ⌁',type = 'text'},
@@ -16844,18 +16860,18 @@ data = {
 },
 }
 }
-return send(msg_chat_id,msg_id,"مطور سورس بلاك ⌯ @"..chdevolper.."","html",true, false, false, true, reply_markup)
+return send(msg_chat_id,msg_id,"مطور سورس بيكوس ⌯ @"..chdevolper.."","html",true, false, false, true, reply_markup)
 end
-if text == '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️' then
+if text == '⌁ B𝑒K𝑜S ⌁️' then
 local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
-return send(msg_chat_id,msg_id,"⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️ ⌯ @"..chsource.."","html",true, false, false, true, reply_markup)
+return send(msg_chat_id,msg_id,"⌁ B𝑒K𝑜S ⌁️ ⌯ @"..chsource.."","html",true, false, false, true, reply_markup)
 end
 if text == 'حذف كليشه ستارت ⌁' then 
 if not msg.Devss then 
@@ -17248,7 +17264,7 @@ if text:match("^@(.*)$") then
 local ch = text:match("^@(.*)$")
 Redis:set(black.."chsource",ch)
 Redis:del(black.."set:chs"..msg.sender.user_id)
-send(msg_chat_id,msg_id,'تم حفظ معرف ⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️ ',"md",true)  
+send(msg_chat_id,msg_id,'تم حفظ معرف ⌁ B𝑒K𝑜S ⌁️ ',"md",true)  
 dofile('black.lua')  
 else
 send(msg_chat_id,msg_id,'المعرف خطأ ',"md",true)  
@@ -17721,7 +17737,7 @@ data = {
 {text = '0', data = IdUser..'calc&0'},{text = '.', data = IdUser..'calc&.'},{text = '+', data = IdUser..'calc&+'},{text = '=', data = IdUser..'equal'},
 },
 {
-{text = 'مطور السورس', url = 'https://t.me/php57'},
+{text = 'مطور السورس', url = 'https://t.me/JJJ22J'},
 },
 }
 }
@@ -18166,7 +18182,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18190,7 +18206,7 @@ if Text and Text:match('(%d+)/cancelkit') then
     type = 'inline',
     data = {
     {
-    {text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+    {text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
     },
     }
     }
@@ -18205,7 +18221,7 @@ if Text and Text:match('(%d+)/cancelkit') then
         type = 'inline',
         data = {
         {
-        {text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+        {text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
         },
         }
         }
@@ -18295,7 +18311,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18313,7 +18329,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18383,7 +18399,7 @@ data = {
 {text = 'الغاء كتم', data = IdUser..'unmute'..replyy}, 
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18401,7 +18417,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18424,7 +18440,7 @@ data = {
 {text = 'الغاء حظر', data = IdUser..'unban'..replyy}, 
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18443,7 +18459,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18464,7 +18480,7 @@ data = {
 {text = 'الغاء تقييد', data = IdUser..'unkid'..replyy}, 
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18482,7 +18498,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18698,7 +18714,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18757,7 +18773,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18804,7 +18820,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18821,7 +18837,7 @@ local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18841,7 +18857,7 @@ data = {
 {text = 'عوده', data = IdUser..'/chback'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18861,7 +18877,7 @@ data = {
 {text = 'عوده', data = IdUser..'/chback'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18904,7 +18920,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18958,7 +18974,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -18998,7 +19014,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19050,7 +19066,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19110,12 +19126,12 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
 local TextHelp = [[*
-⌁ أهلا بك في قائمة العاب سورس بلاك اختر نوع الالعاب 
+⌁ أهلا بك في قائمة العاب سورس بيكوس اختر نوع الالعاب 
 *]]
 edit(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
 end
@@ -19150,12 +19166,12 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
 local TextHelp = [[*
-⌁ مرحبا بك في الالعاب المتطورة الخاص بسورس بلاك 
+⌁ مرحبا بك في الالعاب المتطورة الخاص بسورس بيكوس 
 ⌁ اختر اللعبه ثم اختار المحادثة التي تريد اللعب بها
 *]]
 edit(ChatId,Msg_id,TextHelp, 'md', true, false, reply_markup)
@@ -19170,7 +19186,7 @@ data = {
 {text = 'القائمه الرئيسيه', data = IdUser..'/helpall'},
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
@@ -19221,7 +19237,7 @@ data = {
 {text = 'اوامر القفل', data = IdUser..'/NoNextSeting'}, {text = 'اوامر التعطيل', data = IdUser..'/listallAddorrem'}, 
 },
 {
-{text = '⌁ 𝑆𝑂𝑈𝑅𝐶𝐸 𝐵𝐿𝐴𝐶𝐾 ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
