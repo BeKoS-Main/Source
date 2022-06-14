@@ -15234,20 +15234,24 @@ end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 photo = "https://t.me/photojack14366/58"
 local T =[[
-ــــــــــــــــــــــ⌁ـــــــــــــــــــــ
- ⌁ B𝑒K𝑜S ⌁
-ــــــــــــــــــــــ⌁ـــــــــــــــــــــ
-⌁ 𝐷𝐸𝑉 >> [˹ ＢＥＲＯ ム  .](t.me/JJJ22J)
-ــــــــــــــــــــــ⌁ـــــــــــــــــــــ 
-⌁ 𝐷𝐸𝑉 >> [˹ 𝚃𝙾𝙼𝙰𝚂  .](t.me/tqqqqqq)
-ــــــــــــــــــــــ⌁ـــــــــــــــــــــ 
-⌁ـــ⌁ >> [˹ B𝑒K𝑜S .](t.me/SSMMSS)
-ــــــــــــــــــــــ⌁ـــــــــــــــــــــ 
+
+*𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘴𝘰𝘶𝘳𝘤𝘦 bekos .*
+
+[◉  bekos  𝘤𝘩𝘢𝘯𝘯𝘦𝘭 .](t.me/SSMMSS)
+
+[◉  bekos  𝘥𝘦𝘷𝘦𝘭𝘰𝘱𝘦𝘳 𝚜𝚘𝚞𝚛𝚌𝚎   .](t.me/JJJ22J)
+
+[◉  bekos  𝘥𝘦𝘷𝘦𝘭𝘰𝘱𝘦𝘳 .](t.me/tqqqqqq)
+
+[◉  𝘣𝘰𝘵 bekos  .](t.me/S08BOT)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '🖤 𝑱𝑨𝑪𝑲 🖤', url = "https://t.me/JJJ22J"},
+{text = 'ＢＥＲＯ ム', url = "https://t.me/JJJ22J"},
+},
+{
+{text = '𝚃𝙾𝙼𝙰𝚂 ', url = "https://t.me/tqqqqqq"},
 },
 {
 {text = 'B𝑒K𝑜S ', url = "https://t.me/SSMMSS"}
