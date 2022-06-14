@@ -11791,16 +11791,16 @@ end
 send(msg_chat_id,msg_id,t,"md",true) 
 end 
 
-if text == 'بيكوس' or text == 'خالد'  then
+if text == 'بيكوس' or text == 'بيرو'  then
 local reply_markup = LuaTele.replyMarkup{
 type = 'inline',
 data = {
 {
-{text = ' 🖤 𝑱𝑨𝑪𝑲 🖤', url = 't.me/JJJ22J'}, 
+{text = ' ＢＥＲＯ ム', url = 't.me/JJJ22J'}, 
 },
 }
 }
-return send(msg_chat_id,msg_id,"[🖤 𝑱𝑨𝑪𝑲 🖤](tg://user?id=1390519416)","md",true, false, false, true, reply_markup)
+return send(msg_chat_id,msg_id,"[ＢＥＲＯ ム](tg://user?id=1390519416)","md",true, false, false, true, reply_markup)
 end
 
 if text == 'ابو المجد' then
@@ -11812,7 +11812,7 @@ data = {
 },
 }
 }
-return send(msg_chat_id,msg_id,"[ ᵗᵐ^𝒅𝒂𝒅.✹⃝⁦꙰🇲🇰𝒂𝒃𝒐.𝒂𝒍𝒎𝒂𝒈𝒅. 𝒆𝒍𝒎𝒆𝒍𝒐𝒌𒀭⸙ꠋꠋꠋꠋꠋꠋꠋꠋ](tg://user?id=1872542810)","md",true, false, false, true, reply_markup)
+return send(msg_chat_id,msg_id,"[ 𝚃𝙾𝙼𝙰𝚂](tg://user?id=1872542810)","md",true, false, false, true, reply_markup)
 end
 
 if text == "تفعيل صورتي" or text == "تفعيل الصوره" then
@@ -15232,7 +15232,7 @@ send(msg.chat_id,msg.id,"• للمبرمج بيكوس فقط")
 end
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
-photo = "https://t.me/photojack14366/58"
+photo = "https://t.me/SSMMSS/39"
 local T =[[
 
 *𝘸𝘦𝘭𝘤𝘰𝘮𝘦 𝘵𝘰 𝘴𝘰𝘶𝘳𝘤𝘦 bekos .*
