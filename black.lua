@@ -13785,11 +13785,16 @@ end
 
 if text == 'توب' or text == 'التوب' then
 local reply_markup = LuaTele.replyMarkup{
-type = 'inline',data = {
-{{text = 'توب الفلوس 🏦', data = msg.sender.user_id..'/top/flos'},{text = 'توب الحراميه 🏛️ ', data = msg.sender.user_id..'/top/zrf'},},
-}}
-return LuaTele.sendText(msg.chat_id,msg.id,'*مـرحـبا بك في قائـمة التوب لهذا الاسبوع ᥫ᭡*',"md",false, false, false, false, reply_markup)
-end
+type = 'inline',
+data = {
+{
+{text = 'توب الفلوس 🏦'', data = msg.sender.user_id..'/help1'}, {text = 'توب الحراميه 🏛️', data = msg.sender.user_id..'/help2'}, 
+},
+}
+}
+return send(msg_chat_id,msg_id, [[*
+مـرحـبا بك في قائـمة التوب لهذا الاسبوع ᥫ᭡
+*]],"md",false, false, false, false, reply_markup)
 
 end
 if text == "توب فلوس" or text == "توب الفلوس" then
@@ -18475,7 +18480,7 @@ data = {
 {text = 'الغاء حظر', data = IdUser..'unban'..replyy}, 
 },
 {
-{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K??S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
