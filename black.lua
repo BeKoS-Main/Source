@@ -13808,7 +13808,7 @@ emoji ={
 "9 ",
 "10 ",
 "11 ",
-"12 )",
+"12 ",
 "13 ",
 "14 ",
 "15 ",
@@ -13830,7 +13830,7 @@ local user_tag = '['..nname..'](tg://user?id='..v[2]..')'
 local mony = v[1]
 local emo = emoji[k]
 num = num + 1
-top_mony = top_mony.."*"..emo.."*) *"..mony.."* 💸 l ["..nname.."] \n\n  ━━━━━━━━━\n*# You)*  *"..ballancee.." 💸* l "..news.." \n\n\n*- القائمة تتحدث كل 10 دقائق"
+top_mony = top_mony.."*"..emo.."*)*"..mony.."* 💸 l ["..nname.."] \n\n القائمة تتحدث كل 10 دقائق"
 end 
 end
 return send(msg.chat_id,msg.id,top_mony..gg,"md")
@@ -16356,7 +16356,7 @@ name = string.gsub(name,"👨‍👨‍👧","👨‍👨‍👦👨‍👨‍�
 name = string.gsub(name,"🕒","🕒🕒🕒🕒🕒🕒🕓🕒🕒🕒")
 name = string.gsub(name,"🕤","🕥🕥🕥🕥🕥🕤🕥🕥🕥")
 name = string.gsub(name,"⌛️","⏳⏳⏳⏳⏳⏳⌛️⏳⏳")
-name = string.gsub(name,"📅","📆📆📆📆📆📆📅📆📆")
+name = string.gsub(name,"📅","??📆📆📆📆📆📅📆📆")
 return send(msg_chat_id,msg_id,"⌁ اسرع واحد يدز الاختلاف ~ {"..name.."}","md",true)  
 end
 end
