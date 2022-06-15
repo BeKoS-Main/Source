@@ -13782,8 +13782,7 @@ else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
 end
-
-
+end
 if text == "توب فلوس" or text == "توب الفلوس" then
 local bank_users = Redis:smembers(black.."booob")
 if #bank_users == 0 then
