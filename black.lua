@@ -13737,7 +13737,7 @@ ccccc = Redis:get(black.."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(black.."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(black.."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(black.."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." ريال 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." ريال 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
@@ -13777,7 +13777,7 @@ ccccc = Redis:get(black.."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(black.."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(black.."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(black.."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
@@ -13806,17 +13806,7 @@ emoji ={
 "7",
 "8",
 "9",
-"10",
-"11",
-"12",
-"13",
-"14",
-"15",
-"16",
-"17",
-"18",
-"19",
-"20"
+"10"
 }
 for k,v in pairs(mony_list) do
 if num <= 10 then
@@ -13859,17 +13849,7 @@ emojii ={
 "7",
 "8",
 "9",
-"10",
-"11",
-"12",
-"13",
-"14",
-"15",
-"16",
-"17",
-"18",
-"19",
-"20"
+"10"
 }
 for k,v in pairs(ty_list) do
 if num_ty <= 10 then
@@ -13897,12 +13877,13 @@ return send(msg.chat_id,msg.id,"•  من شوي اخذت بخشيش استنى 
 end
 local jjjo = math.random(1,200);
 Redis:incrby(black.."boob"..msg.sender.user_id , jjjo)
-send(msg.chat_id,msg.id,"•  تكرم وهي بخشيش "..jjjo.." ريال 💵","md",true)
+send(msg.chat_id,msg.id,"•  تكرم وهي بخشيش "..jjjo.." جنيه 💵","md",true)
 Redis:setex(black.."iioo" .. msg.sender.user_id,600, true)
 else
 send(msg.chat_id,msg.id, "•  ماعندك حساب بنكي ارسل ↢ ( `انشاء حساب بنكي` )","md",true)
 end
 end
+
 
 
 if text == 'زرف' or text == "سرقه" or text == 'زرفو' or text == 'زرفه' and tonumber(msg.reply_to_message_id) ~= 0 then
