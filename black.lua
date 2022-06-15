@@ -13783,20 +13783,7 @@ send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
 end
 
-if text == 'توب' or text == 'التوب' then
-local reply_markup = LuaTele.replyMarkup{
-type = 'inline',
-data = {
-{
-{text = 'توب الفلوس 🏦'', data = msg.sender.user_id..'/help1'}, {text = 'توب الحراميه 🏛️', data = msg.sender.user_id..'/help2'}, 
-},
-}
-}
-return send(msg_chat_id,msg_id, [[*
-مـرحـبا بك في قائـمة التوب لهذا الاسبوع ᥫ᭡
-*]],"md",false, false, false, false, reply_markup)
 
-end
 if text == "توب فلوس" or text == "توب الفلوس" then
 local bank_users = Redis:smembers(black.."booob")
 if #bank_users == 0 then
@@ -13849,7 +13836,7 @@ gflous = string.format("%d", ballancee):reverse():gsub( "(%d%d%d)" , "%1," ):rev
 gg = " ━━━━━━━━━\n*• you)*  *"..gflous.." 💰* l "..news.." \n\n\n*ملاحظة : اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه*"
 end
 end
-return LuaTele.sendText(msg.chat_id,msg.id,top_mony..gg,"md",true)
+return send(msg.chat_id,msg.id,top_mony..gg,"md")
 end
 
 if text == "توب الحراميه" or text == "توب الحرامية" or text == "توب حراميه" or text == "توب الزرف" or text == "توب زرف" then
@@ -18480,7 +18467,7 @@ data = {
 {text = 'الغاء حظر', data = IdUser..'unban'..replyy}, 
 },
 {
-{text = '⌁ B𝑒K??S ⌁️', url = 't.me/'..chsource..''}, 
+{text = '⌁ B𝑒K𝑜S ⌁️', url = 't.me/'..chsource..''}, 
 },
 }
 }
