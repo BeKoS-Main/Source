@@ -13835,8 +13835,7 @@ local user_tag = '['..nname..'](tg://user?id='..v[2]..')'
 local mony = v[1]
 local emo = emoji[k]
 num = num + 1
-top_mony = top_mony.."*"..emo.."*) *"..mony.."* 💸 l ["..nname.."] \n"
-gg = " ━━━━━━━━━\n*# You)*  *"..ballancee.." 💸* l "..news.." \n\n\n*- القائمة تتحدث كل 10 دقائق"
+top_mony = top_mony.."*"..emo.."*) *"..mony.."* 💸 l ["..nname.."] \n\n  ━━━━━━━━━\n*# You)*  *"..ballancee.." 💸* l "..news.." \n\n\n*- القائمة تتحدث كل 10 دقائق"
 end 
 end
 return send(msg.chat_id,msg.id,top_mony..gg,"md")
@@ -13894,7 +13893,7 @@ local user_tag = '['..nname..'](tg://user?id='..v[2]..')'
 local mony = v[1]
 local emoo = emojii[k]
 num_ty = num_ty + 1
-ty_anubis = ty_anubis.."*"..emoo.."*) *"..mony.."* 💵 l ["..nname.."] \n"
+ty_anubis = ty_anubis.."*"..emoo.."**"..mony.."* 💵 l ["..nname.."] \n"
 end
 end
 return send(msg.chat_id,msg.id,ty_anubis,"md")
