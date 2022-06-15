@@ -13788,7 +13788,7 @@ local bank_users = Redis:smembers(black.."booob")
 if #bank_users == 0 then
 return send(msg.chat_id,msg.id,"•  لا يوجد حسابات في البنك","md",true)
 end
-top_mony = "توب اغنى 10 شخص في البوت :\n\n"
+top_mony = "توب 20 اغنى اشخاص::\n\n"
 mony_list = {}
 for k,v in pairs(bank_users) do
 local mony = Redis:get(black.."boob"..v)
@@ -13807,9 +13807,19 @@ emoji ={
 "8",
 "9",
 "10"
+"11",
+"12",
+"13",
+"14",
+"15",
+"16",
+"17"
+"18",
+"19",
+"20",
 }
 for k,v in pairs(mony_list) do
-if num <= 10 then
+if num <= 20 then
 local user_name = LuaTele.getUser(v[2]).first_name
 if user_name then
 nname = user_name
@@ -13820,7 +13830,7 @@ local user_tag = '['..nname..'](tg://user?id='..v[2]..')'
 local mony = v[1]
 local emo = emoji[k]
 num = num + 1
-top_mony = top_mony.."*"..emo.."*) *"..mony.."* 💰 l ["..nname.."] \n"
+top_mony = top_mony.."*"..emo.."*) *"..mony.."* 💰 l ["..nname.."] \n\n - القائمة تتحدث كل 10 دقائق"
 end
 end
 return send(msg.chat_id,msg.id,top_mony,"md")
@@ -13831,7 +13841,7 @@ local ty_users = Redis:smembers(black.."zrfffid")
 if #ty_users == 0 then
 return send(msg.chat_id,msg.id,"•  لا يوجد احد","md",true)
 end
-ty_anubis = "توب 10 اشخاص زرفوا فلوس :\n\n"
+ty_anubis = "توب 20 اكثر الحراميه زرفًا:\n\n"
 ty_list = {}
 for k,v in pairs(ty_users) do
 local mony = Redis:get(black.."zrfff"..v)
@@ -13850,9 +13860,19 @@ emojii ={
 "8",
 "9",
 "10"
+"11",
+"12",
+"13",
+"14",
+"15",
+"16",
+"17"
+"18",
+"19",
+"20",
 }
 for k,v in pairs(ty_list) do
-if num_ty <= 10 then
+if num_ty <= 20 then
 local user_name = LuaTele.getUser(v[2]).first_name
 if user_name then
 nname = user_name
@@ -13863,7 +13883,7 @@ local user_tag = '['..nname..'](tg://user?id='..v[2]..')'
 local mony = v[1]
 local emoo = emojii[k]
 num_ty = num_ty + 1
-ty_anubis = ty_anubis.."*"..emoo.."*) *"..mony.."* 💵 l ["..nname.."] \n"
+ty_anubis = ty_anubis.."*"..emoo.."*) *"..mony.."* 💵 l ["..nname.."] \n\n - القائمة تتحدث كل 10 دقائق"
 end
 end
 return send(msg.chat_id,msg.id,ty_anubis,"md")
@@ -16684,7 +16704,7 @@ else
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = 'مطور السورس ⌁',type = 'text'},{text = '⌁ B𝑒K𝑜S ⌁️',type = 'text'},
+{text = 'مطور السورس ⌁',type = 'text'},{text = '⌁ B𝑒K??S ⌁️',type = 'text'},
 },
 {
 {text = 'تعيين قناه السورس ⌁',type = 'text'},{text = 'تعيين مطور السورس ⌁',type = 'text'},
