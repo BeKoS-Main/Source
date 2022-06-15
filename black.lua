@@ -13835,7 +13835,7 @@ gflous = string.format("%d", ballancee):reverse():gsub( "(%d%d%d)" , "%1," ):rev
 gg = " ━━━━━━━━━\n*• you)*  *"..gflous.." 💰* l "..news.." \n\n\n*ملاحظة : اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه*"
 end
 end
-return send(msg.chat_id,msg.id,top_mony..gg,"md")
+return send(msg.chat_id,msg.id,top_mony,"md")
 end
 
 if text == "توب الحراميه" or text == "توب الحرامية" or text == "توب حراميه" or text == "توب الزرف" or text == "توب زرف" then
