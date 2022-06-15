@@ -13819,7 +13819,7 @@ emoji ={
 "20"
 }
 for k,v in pairs(mony_list) do
-if num <= 20 then
+if num <= 10 then
 local user_name = LuaTele.getUser(v[2]).first_name
 if user_name then
 nname = user_name
@@ -13831,8 +13831,6 @@ local mony = v[1]
 local emo = emoji[k]
 num = num + 1
 top_mony = top_mony.."*"..emo.."*) *"..mony.."* 💰 l ["..nname.."] \n"
-gflous = string.format("%d", ballancee):reverse():gsub( "(%d%d%d)" , "%1," ):reverse():gsub("^,","")
-gg = " ━━━━━━━━━\n*• you)*  *"..gflous.." 💰* l "..news.." \n\n\n*ملاحظة : اي شخص مخالف للعبة بالغش او حاط يوزر بينحظر من اللعبه وتتصفر فلوسه*"
 end
 end
 return send(msg.chat_id,msg.id,top_mony,"md")
