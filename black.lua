@@ -13722,7 +13722,7 @@ if msg.ControllerBot then
 local Remsg = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
 local UserInfo = LuaTele.getUser(Remsg.sender.user_id)
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-send(msg.chat_id,msg.id,"\n*•  بيكوس ماعنده حساب بالبنك 🤣*","md",true)  
+send(msg.chat_id,msg.id,"\n*•  بلاك ماعنده حساب بالبنك 🤣*","md",true)  
 return false
 end
 local ban = LuaTele.getUser(Remsg.sender.user_id)
@@ -13737,7 +13737,7 @@ ccccc = Redis:get(black.."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(black.."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(black.."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(black.."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
@@ -13762,7 +13762,7 @@ if msg.ControllerBot then
 local Remsg = LuaTele.getMessage(msg.chat_id, msg.reply_to_message_id)
 local UserInfo = LuaTele.getUser(Remsg.sender.user_id)
 if UserInfo and UserInfo.type and UserInfo.type.luatele == "userTypeBot" then
-send(msg.chat_id,msg.id,"\n*•  بيكوس ماعنده حساب بالبنك 🤣*","md",true)  
+send(msg.chat_id,msg.id,"\n*•  بلاك ماعنده حساب بالبنك 🤣*","md",true)  
 return false
 end
 local ban = LuaTele.getUser(Remsg.sender.user_id)
@@ -13777,7 +13777,7 @@ ccccc = Redis:get(black.."boobb"..Remsg.sender.user_id)
 uuuuu = Redis:get(black.."bbobb"..Remsg.sender.user_id)
 ppppp = Redis:get(black.."zrfff"..Remsg.sender.user_id) or 0
 ballanceed = Redis:get(black.."boob"..Remsg.sender.user_id) or 0
-send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بيكوس )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
+send(msg.chat_id,msg.id, "•  الاسم ↢ "..news.."\n•  الحساب ↢ `"..ccccc.."`\n•  بنك ↢ ( بلاك )\n•  نوع ↢ ( "..uuuuu.." )\n•  الزرف ↢ ( "..ppppp.." جنيه 💵 )\n•  صار رصيده ↢ ( "..ballanceed.." جنيه 💵 )\n✦","md",true)
 else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
