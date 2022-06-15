@@ -13788,7 +13788,7 @@ local bank_users = Redis:smembers(black.."booob")
 if #bank_users == 0 then
 return send(msg.chat_id,msg.id,"•  لا يوجد حسابات في البنك","md",true)
 end
-top_mony = "توب 20 اغنى اشخاص::\n\n"
+top_mony = "توب 20 اغنى اشخاص:\n\n"
 mony_list = {}
 for k,v in pairs(bank_users) do
 local mony = Redis:get(black.."boob"..v)
@@ -13806,17 +13806,17 @@ emoji ={
 "7",
 "8",
 "9",
-"10"
+"10",
 "11",
 "12",
 "13",
 "14",
 "15",
 "16",
-"17"
+"17",
 "18",
 "19",
-"20",
+"20"
 }
 for k,v in pairs(mony_list) do
 if num <= 20 then
@@ -13859,17 +13859,17 @@ emojii ={
 "7",
 "8",
 "9",
-"10"
+"10",
 "11",
 "12",
 "13",
 "14",
 "15",
 "16",
-"17"
+"17",
 "18",
 "19",
-"20",
+"20"
 }
 for k,v in pairs(ty_list) do
 if num_ty <= 20 then
@@ -16704,7 +16704,7 @@ else
 local reply_markup = LuaTele.replyMarkup{type = 'keyboard',resize = true,is_personal = true,
 data = {
 {
-{text = 'مطور السورس ⌁',type = 'text'},{text = '⌁ B𝑒K??S ⌁️',type = 'text'},
+{text = 'مطور السورس ⌁',type = 'text'},{text = '⌁ B𝑒K𝑜S ⌁️',type = 'text'},
 },
 {
 {text = 'تعيين قناه السورس ⌁',type = 'text'},{text = 'تعيين مطور السورس ⌁',type = 'text'},
