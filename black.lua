@@ -13782,6 +13782,15 @@ else
 send(msg.chat_id,msg.id, "•  ماعنده حساب بنكي ","md",true)
 end
 end
+
+if text == 'توب' or text == 'التوب' then
+local reply_markup = LuaTele.replyMarkup{
+type = 'inline',data = {
+{{text = 'توب الفلوس 🏦', data = msg.sender.user_id..'/top/flos'},{text = 'توب الحراميه 🏛️ ', data = msg.sender.user_id..'/top/zrf'},},
+}}
+return LuaTele.sendText(msg.chat_id,msg.id,'*مـرحـبا بك في قائـمة التوب لهذا الاسبوع ᥫ᭡*',"md",false, false, false, false, reply_markup)
+end
+
 end
 if text == "توب فلوس" or text == "توب الفلوس" then
 local bank_users = Redis:smembers(black.."booob")
